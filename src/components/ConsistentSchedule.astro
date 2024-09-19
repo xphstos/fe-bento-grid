@@ -1,12 +1,11 @@
 ---
-import {Image} from "astro:assets"
 import illustration from "@assets/illustration-consistent-schedule.webp"
 ---
 
 
 <article>
     <h2>Maintain a consistent posting schedule.</h2>
-<Image src={illustration} alt= />
+    <img src={illustration.src} width={illustration.width} height={illustration.height} decoding="async" loading="lazy" alt='' />
 </article>
 
 

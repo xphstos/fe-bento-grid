@@ -1,10 +1,9 @@
 ---
-import { Image } from "astro:assets";
 import illustration from "@assets/illustration-grow-followers.webp"
 ---
 
 <article>
-<Image src={illustration} alt='' />
+<img src={illustration.src} width={illustration.width} height={illustration.height} decoding="async" loading="lazy" alt='' />
 <h2>Grow followers <br />with non-stop content.</h2>
 </article>
 

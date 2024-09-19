@@ -1,11 +1,10 @@
 ---
-import { Image } from "astro:assets";
 import illustration from "@assets/illustration-ai-content.webp"
 ---
 
 <article>
 <h2>Write your content using AI.</h2>
-<Image src={illustration} alt='' />
+<img src={illustration.src} width={illustration.width} height={illustration.height} decoding="async" loading="lazy" alt='' />
 </article>
 
 

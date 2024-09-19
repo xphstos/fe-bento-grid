@@ -1,12 +1,11 @@
 ---
-import { Image } from "astro:assets";
 import illustration from "@assets/illustration-five-stars.webp"
 ---
 
 
 <article>
     <h2>Social Media <span>10x</span> <em>Faster</em> with AI</h2>
-    <Image src={illustration} alt="" role="presentation" />
+    <img src={illustration.src} width={illustration.width} height={illustration.height} decoding="async" loading="lazy" alt='' />
     <p>Over 4,000 5-star reviews</p>
 </article>
 

@@ -1,10 +1,9 @@
 ---
-import { Image } from "astro:assets";
 import illustration from "@assets/illustration-multiple-platforms.webp"
 ---
 
 <article>
-    <Image src={illustration} alt="" />
+        <img src={illustration.src} width={illustration.width} height={illustration.height} decoding="async" loading="lazy" alt='' />
     <h2>Manage multiple accounts and platforms.</h2>
 </article>
 

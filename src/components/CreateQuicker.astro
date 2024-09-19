@@ -1,11 +1,10 @@
 ---
-import { Image } from "astro:assets";
 import illustration from "@assets/illustration-create-post.webp"
 ---
 
 <article>
-<h2>Create and schedule content <em>quicker.</em></h2>
-<Image src={illustration} alt='' />
+    <h2>Create and schedule content <em>quicker.</em></h2>
+    <img src={illustration.src} width={illustration.width} height={illustration.height} decoding="async" loading="lazy" alt='' />
 </article>
 
 

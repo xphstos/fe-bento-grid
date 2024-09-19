@@ -1,12 +1,11 @@
 ---
-import { Image } from "astro:assets";
 import illustration from "@assets/illustration-schedule-posts.webp"
 ---
 
 <article>
 <h2>Schedule to social media.
 </h2>
-<Image src={illustration} alt='' />
+    <img src={illustration.src} width={illustration.width} height={illustration.height} decoding="async" loading="lazy" alt='' />
 <p>Optimize post timings to publish content at the perfect time for your audience.</p>
 </article>
 
