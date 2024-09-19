@@ -1,0 +1,74 @@
+---
+import SocialMediaFaster from '@components/SocialMediaFaster.astro';
+import Layout from '../layouts/Layout.astro';
+import ManageMultipleAccounts from '@components/ManageMultipleAccounts.astro';
+import ConsistentSchedule from '@components/ConsistentSchedule.astro';
+import SchedulePosts from '@components/SchedulePosts.astro';
+import GrowFollowers from "@components/GrowFollowers.astro"
+import AudienceGrowth from "@components/AudienceGrowth.astro"
+import CreateQuicker from "@components/CreateQuicker.astro"
+import AIContent from "@components/AIContent.astro"
+---
+
+<Layout title="Frontend Mentor | Bento grid">
+    <main>
+        <SocialMediaFaster />
+        <ManageMultipleAccounts />
+        <ConsistentSchedule />
+        <SchedulePosts />
+        <GrowFollowers />
+        <AudienceGrowth />
+        <section>
+            <CreateQuicker />
+            <AIContent />
+        </section>
+    </main>
+</Layout>
+
+<style>
+    main {
+        display: grid;
+        gap: 2rem;
+        padding-block: 2rem;
+        min-block-size: 100dvh;
+        padding-inline: max(
+            var(--padding-inline, 1rem),
+            50% - (var(--container, 20rem) / 2)
+        );
+
+        @media (width > 620px) {
+            --container: 40rem;
+            place-content: center;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "SocialMediaFaster SocialMediaFaster"
+                "ManageMultipleAccounts ConsistentSchedule"
+                "GrowFollowers GrowFollowers"
+                "AudienceGrowth SchedulePosts"
+                ". SchedulePosts"
+                "AIContent AIContent";
+        }
+
+        @media (width > 1024px) {
+            --container: 70rem;
+            place-content: center;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+                "AiQuicker SocialMediaFaster SocialMediaFaster SchedulePosts"
+                "AiQuicker ManageMultipleAccounts ConsistentSchedule SchedulePosts"
+                "AiQuicker AudienceGrowth GrowFollowers GrowFollowers";
+        }
+    }
+
+    section {
+        display: contents;
+
+
+        @media (width > 1024px) {
+            display: grid;
+            gap: 2rem;
+            grid-template-rows: repeat(2, 1fr);
+            grid-area: AiQuicker;
+        }
+    }
+</style>

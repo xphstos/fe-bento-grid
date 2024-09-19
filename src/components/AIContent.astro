@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import illustration from "@assets/illustration-ai-content.webp"
+---
+
+<article>
+<h2>Write your content using AI.</h2>
+<Image src={illustration} alt='' />
+</article>
+
+
+<style>
+    article {
+        padding: 1.5rem;
+        background: hsl(var(--yellow-500));
+
+        @media (width > 620px) {
+            grid-area: AIContent;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+        }
+
+        @media (width > 1024px) {
+            grid-area: unset;
+            grid-template-columns: 1fr;
+            align-items: unset;
+        }
+    }
+
+    h2 {
+        line-height: 1.125;
+        letter-spacing: -0.05em;
+
+        @media (width > 620px) {
+           font-size: 2.5rem;
+           line-height: 0.9;
+           letter-spacing: -0.03em;
+        }
+    }
+
+    img {
+        margin-block-start: 1rem;
+        max-inline-size:  13.75rem;
+
+        @media (width > 1024px) {
+            align-self: end;
+            max-inline-size: 100%;
+        }
+    }
+
+</style>

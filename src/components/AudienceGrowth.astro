@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+import illustration from "@assets/illustration-audience-growth.webp"
+---
+
+<article>
+    <h2><span>56%</span> faster audience growth</h2>
+    <Image src={illustration} alt='' />
+</article>
+
+
+<style>
+    article {
+        padding: 1.5rem;
+        background: hsl(var(--white));
+
+        @media (width > 620px) {
+            grid-area: AudienceGrowth;
+            display: grid;
+        }
+    }
+
+    img {
+        margin-block-start: 1rem;
+        max-inline-size: 11.25rem;
+
+        @media (width > 620px) {
+            align-self: end;
+        }
+    }
+
+    h2  {
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 1.25;
+    }
+
+    span {
+        letter-spacing: -0.05em;
+        font-size: 3rem;
+        display: flex;
+        font-weight: 500;
+        align-items: center;
+        letter-spacing: 0;
+        position: relative;
+        padding-left: .75ch;
+
+        &::before {
+            content: '>';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-55%);
+        }
+
+        @media (width > 620px) {
+            font-size: 3.75rem;
+        }
+    }
+</style>

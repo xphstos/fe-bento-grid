@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import illustration from "@assets/illustration-grow-followers.webp"
+---
+
+<article>
+<Image src={illustration} alt='' />
+<h2>Grow followers <br />with non-stop content.</h2>
+</article>
+
+
+<style>
+    article {
+        padding: 1rem 2rem;
+        background: hsl(var(--purple-500));
+        color: hsl(var(--white));
+        text-align: center;
+
+        @media (width > 620px) {
+            grid-area: GrowFollowers;
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            padding: 1.5rem;
+            text-align: left;
+        }
+    }
+
+    img {
+        max-inline-size: 14rem;
+
+        @media (width <= 620px) {
+            margin-block-end: 2rem;
+        }
+    }
+
+    h2 {
+        font-size: 2rem;
+        letter-spacing: -0.05em;
+
+        @media (width > 620px) {
+            font-size: 2.5rem;
+            letter-spacing: -0.03em;
+            line-height: .9;
+        }
+    }
+</style>

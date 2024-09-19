@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import illustration from "@assets/illustration-five-stars.webp"
+---
+
+
+<article>
+    <h2>Social Media <span>10x</span> <em>Faster</em> with AI</h2>
+    <Image src={illustration} alt="" role="presentation" />
+    <p>Over 4,000 5-star reviews</p>
+</article>
+
+
+<style>
+
+article {
+    background: hsl(var(--purple-500));
+    color: hsl(var(--white));
+    text-align: center;
+    padding: 2rem;
+
+    @media (width > 620px) {
+        grid-area: SocialMediaFaster;
+        padding: 3.5rem 2rem;
+    }
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: .9;
+    letter-spacing: 0;
+
+    @media (width > 620px) {
+        font-size: 3.875rem;
+    }
+}
+
+span {
+    color:hsl(var(--yellow-500));
+}
+
+img {
+    max-inline-size: 10em;
+    margin-block: 1.5rem .5rem;
+}
+</style>

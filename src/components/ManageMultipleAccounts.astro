@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import illustration from "@assets/illustration-multiple-platforms.webp"
+---
+
+<article>
+    <Image src={illustration} alt="" />
+    <h2>Manage multiple accounts and platforms.</h2>
+</article>
+
+
+<style>
+    article {
+        padding: 1rem;
+        background: hsl(var(--white));
+        position: relative;
+
+        @media (width > 620px) {
+            grid-area: ManageMultipleAccounts;
+            display: grid;
+            padding: 1.5rem;
+        }
+
+        @media (width > 1024px) {
+            aspect-ratio: 256 / 248;
+        }
+    }
+
+    img {
+        margin-block-end: 1rem;
+        aspect-ratio: 633 / 134;
+
+        @media (width > 620px) {
+           min-inline-size: 150%;
+           position: relative;
+        }
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        letter-spacing: -0.05em;
+
+        @media (width > 620px) {
+          align-self: end;
+          font-size: 2rem;
+          line-height: .9;
+        }
+    }
+</style>

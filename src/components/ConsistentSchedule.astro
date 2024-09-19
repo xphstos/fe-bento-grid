@@ -1,0 +1,54 @@
+---
+import {Image} from "astro:assets"
+import illustration from "@assets/illustration-consistent-schedule.webp"
+---
+
+
+<article>
+    <h2>Maintain a consistent posting schedule.</h2>
+<Image src={illustration} alt= />
+</article>
+
+
+<style>
+    article {
+        padding: 1rem 1rem 0 1rem;
+        background: hsl(var(--yellow-500));
+
+        @media (width > 620px) {
+            grid-area: ConsistentSchedule;
+            position: relative;
+            aspect-ratio: 1;
+            padding: 1.5rem;
+        }
+
+        @media (width > 1024px) {
+            aspect-ratio: 256 / 248;
+        }
+    }
+
+    img {
+        margin-block-start: 1rem;
+        max-inline-size: 13rem;
+
+        @media (width > 620px) {
+          position: absolute;
+          bottom: -10%;
+          max-inline-size: calc(100% - 3rem);
+        }
+
+        @media (width > 1024px) {
+          bottom: unset;
+        }
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        letter-spacing: -0.05em;
+
+        @media (width > 620px) {
+             line-height: .9;
+            font-size: 2rem;
+        }
+    }
+</style>
